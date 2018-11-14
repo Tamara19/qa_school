@@ -70,7 +70,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <properties>
-                        <excludeTags>simple</excludeTags>
+                        <excludeTags>${excludeTags}</excludeTags>
                     </properties>
                 </configuration>
                 <dependencies>

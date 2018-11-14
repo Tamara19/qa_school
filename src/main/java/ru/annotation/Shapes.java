@@ -15,11 +15,4 @@ public abstract class Shapes {
         return Math.PI * Math.pow(radius, 2);
     }
 
-    public static void main(String[] args) {
-        System.out.println(areaSquare(2.15));
-        double d = areaTriangle(8, 5, 10);
-        d = Math.round((d*100))/100.0d;
-        System.out.println(Math.round((areaTriangle(2.5, 6.7, 4.56)*100))/100.0d);
-        System.out.println(areaCircle(10.5));
-    }
 }

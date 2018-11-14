@@ -19,8 +19,7 @@ public class TestShapes {
     @DisplayName("Тест площади треугольника с утверждением JUnit 5")
     public void areaTriangleTest() {
         double triangle = areaTriangle(8, 5, 10);
-        triangle = Math.round((triangle * 100)) / 100.0d;
-        Assertions.assertEquals(19.81, triangle, "Wrong value!");
+        Assertions.assertEquals(19.81, triangle, 0.01, "Wrong value!");
     }
 
     @Tag("simple")
@@ -29,7 +28,7 @@ public class TestShapes {
     public void areaSquareTest() {
         double square = areaSquare(2.15);
         square = Math.round((square * 100)) / 100.0d;
-        assertThat(square, equalTo(4.62));
+        assertThat("Wrong value!", square, equalTo(4.62));
     }
 
     @Test
@@ -38,7 +37,7 @@ public class TestShapes {
     public void areaCircleTest() {
         double circle = areaCircle(10.5);
         circle = Math.round((circle * 100)) / 100.0d;
-        assertThat(circle, equalTo(346.36));
+        assertThat("Wrong value!", circle, equalTo(346.36));
     }
 
     @ParameterizedTest()
