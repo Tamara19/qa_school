@@ -8,7 +8,7 @@ import lombok.ToString;
 @Data
 @ToString
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class TradeInfo {
+public class SubscriptionInfo {
     private String id;
     private String instrumentId;
     private Long priceAlert;

@@ -1,10 +1,9 @@
 package ru.request;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.authentication.PreemptiveBasicAuthScheme;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -20,8 +19,9 @@ public abstract class RequestModel {
                 .setBaseUri(BASE_URI)
                 .setBasePath(BASE_PATH)
                 .setAuth(authScheme)
-                .addFilter(new RequestLoggingFilter())
-                .addFilter(new ResponseLoggingFilter())
+//                .addFilter(new RequestLoggingFilter())
+//                .addFilter(new ResponseLoggingFilter())
+                .addFilter(new AllureRestAssured())
                 .build();
     }
 
